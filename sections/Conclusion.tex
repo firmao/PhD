@@ -40,7 +40,16 @@ The evaluation shows that all filter setup outperform the naive approach. Our pa
 It is also the key to developing systems for Record Linkage and Link Discovery in knowledge bases.
 As future work, we plan to integrate it in link discovery applications for the validation of equivalence links. The source code is free and available online.\footnote{\url{https://github.com/firmao/StringSimilarity/}}
 
-\section{LODrelationIndex}
-TBA
+\section{ReLOD: The incremental LOD Dataset relation index}
+We present a method to create a repository to store the similarity between a large number of datasets involving the detection of duplicated datasets and dataset chunks.
 
-As future vision of dealing with large collection of LOD datasets, TBA.
+The method involves the creation of an index over a total of 668,166 datasets from LOD Stats and LOD Laundromat as well as 559 active SPARQL endpoints, representing a total of 221.7 billion triples from more than 5 terabytes of information from datasets partially retrieved using the service ``Where is My URI'' (WIMU). 
+
+For the first time, to the best of our knowledge, we make a relation index that can query by dataset URI, property, class, or SPARQL query.
+
+Our experiments show that more than 90\% of datasets from LODLaundromat datasets are not using owl:equivalentProperty and owl:equivalentClass or another way to relate the data, reinforcing the need for an index of relations among LOD datasets.
+
+We realize that the Datasets still not sharing the expected properties, and the ontologies are not aligned, making hard the task to query multiple heterogeneous datasets.
+We believe that this work can help people to identify similar datasets among a large number of datasets.
+As future work, the next step is to improve the GUI drawing a weighted graph that shows the similarity level of each dataset.
+The source-code is available online\footnote{\url{https://github.com/firmao/LODDatasetRelationsWeb}}.

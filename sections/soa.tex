@@ -137,5 +137,15 @@ Among the several types of string similarity, emerging works have been done for 
 The Jaccard Index \cite{jaccard1912distribution}, also called Jaccard coefficient, works on the bitwise operators, where the strings are treated at bit level. 
 REEDED \cite{soru2013rapid} was the first approach for the time-efficient execution of weighted edit distances. 
 
-\section{LODrelationIndex}
-\todo[inline]{TBA}
+\section{ReLOD}
+The work from \cite{asprino2019linked,asprino2019observing,asprino2019triplifying} contains very important statistics about LOD datasets, including a data structure called Equivalence Set Graph (ESG), which allows specifying compact views of large RDF graphs thus easing the accomplishment of statistical observations like the number of concepts defined in a graph. The work helps to show that the LOD datasets are not really linked and the main difference here is that they do not have a goal to compute similarity level among the datasets based on the properties and class similarities.
+
+Loupe \cite{mihindukulasooriya2016two} has an index of property and classes from some datasets, but still fewer datasets and it is not incremental.
+
+The approach from \cite{emaldi2015detection} it is built on the assumption that similar datasets should have a similar structure and include semantically similar resources and relationships based on the combination of Frequent Subgraph Mining (FSM) techniques, used to synthesize the datasets and find similarities among them.
+
+The works from \cite{baron-2016-ldow-assessing-links} and \cite{BaronKKPEH2017IDOL} also provides an approach to identify duplicated data in huge datasets from LODLaundromat and DBpedia. A good point to highlight in those works is the use of bloom filters, which helps to identify duplicated data. The identified different aims compared with our approach are an index of similarity of the datasets based on properties and classes shared among them and the identification of datasets to execute a given SPARQL query. 
+
+We should also consider the enforcement from ENTITY RECONCILIATION COMMUNITY GROUP\footnote{\url{https://www.w3.org/community/reconciliation/}}, in which aim to document an existing API, share the experiences and lessons learned from it\cite{DBLP:journals/corr/abs-1906-08092}.
+
+Those works cover an important relationship but none of them look into our main drawback here, which is to obtain the similarity level among a huge amount of datasets.
